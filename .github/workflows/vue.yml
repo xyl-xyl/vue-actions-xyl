@@ -5,10 +5,17 @@ jobs:
     name: pnpm build工作
     runs-on: windows-latest
     steps:
+      name: 打印hello world
       -run: echo "Hello, world!"
+      name: 安装依赖pnpm
       -run: node -version
+      name: 安装pnpm
       -run: npm install -g pnpm
+      name: 检查pnpm版本
       -run: pnpm -version
+      name: 安装依赖pnpm包
       -run: pnpm install
+      name: 检查pnpm包
       -run: pnpm run lint
+      name: 构建项目
       -run: pnpm run build

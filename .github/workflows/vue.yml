@@ -3,11 +3,11 @@ on: push
 jobs:
   pnpm-build:
     name: pnpm build工作
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: 打印hello world
-        run: echo "Hello, world!"
-      - name: 安装依赖pnpm
+      - name: 打印当前目录
+        run: pwd
+      - name: 检查node版本
         run: node -version
       - name: 安装pnpm
         run: npm install -g pnpm
